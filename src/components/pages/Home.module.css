@@ -1,0 +1,148 @@
+.hero {
+    padding: 160px 0 120px;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.heroBrandName {
+    font-size: clamp(3rem, 10vw, 7rem);
+    font-family: 'Amiri', serif;
+    color: var(--brand-ink);
+    margin-bottom: 10px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: clamp(1.3rem, 3vw, 2.4rem);
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.heroSub {
+    font-size: clamp(0.95rem, 2vw, 1.2rem);
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto 48px;
+    line-height: 1.8;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+}
+
+.serviceCard {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceCard .iconWrapper {
+    width: 64px;
+    height: 64px;
+    background: var(--primary-pale);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: var(--transition);
+    color: var(--brand-ink);
+}
+
+.serviceCard:hover .iconWrapper {
+    background: var(--primary-glow);
+    transform: translateY(-5px);
+}
+
+.iconSvg {
+    width: 32px;
+    height: 32px;
+}
+
+.sTitle {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--brand-ink);
+}
+
+.sDesc {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.sLink {
+    font-weight: 700;
+    color: var(--brand-ink);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 110px 0 70px;
+        min-height: auto;
+    }
+
+    .heroBrandName {
+        font-size: clamp(2.5rem, 15vw, 4.5rem);
+        letter-spacing: -1px;
+    }
+
+    .heroSubtitle {
+        font-size: 1.3rem;
+    }
+
+    .heroSub {
+        font-size: 0.95rem;
+        margin-bottom: 32px;
+    }
+
+    .serviceCard {
+        padding: 12px 6px !important;
+        text-align: center;
+        align-items: center;
+    }
+
+    .iconWrapper {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .iconSvg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .sTitle {
+        font-size: 0.75rem !important;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+
+    .sDesc, .sLink {
+        display: none !important; /* إخفاء الوصف والرابط لتوفير مساحة للأربع أيقونات */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 100px 0 60px;
+    }
+}
